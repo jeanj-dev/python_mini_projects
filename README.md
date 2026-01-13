@@ -1,2 +1,2 @@
 # python_mini_projects
-Small python projects that solve practical, real-world problems.
+A collection of small python programs built that solve practical, real-world problems while learning computer science fundamentals.
