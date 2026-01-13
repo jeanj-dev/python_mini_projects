@@ -5,6 +5,7 @@ A collection of small python programs built that solve practical, real-world pro
 A collection of small Python programs built to solve practical, real-world problems while learning computer science fundamentals.
 
 ## Projects Included
+- Annual contribution investment calculator
 - Compound interest calculator with periodic compounding
 - Paycheck calculator
 - Temperature converters (F ↔ C)
@@ -17,10 +18,12 @@ A collection of small Python programs built to solve practical, real-world probl
 
 ## Skills Demonstrated
 - User input and output
-- Numeric calculations
+- Numeric calculations and financials formulas
 - Program structure
-- Problem-solving
+- real-world problem-solving
+- Modeling investment growth over time
 - iterative problem-solving using loops
+  
 
 ## How to Run
 Run any file using:
