@@ -5,6 +5,7 @@ A collection of small python programs built that solve practical, real-world pro
 A collection of small Python programs built to solve practical, real-world problems while learning computer science fundamentals.
 
 ## Projects Included
+- Compound interest calculator with periodic compounding
 - Paycheck calculator
 - Temperature converters (F ↔ C)
 - Simple interest calculator
@@ -19,6 +20,7 @@ A collection of small Python programs built to solve practical, real-world probl
 - Numeric calculations
 - Program structure
 - Problem-solving
+- iterative problem-solving using loops
 
 ## How to Run
 Run any file using:
