@@ -1,4 +1,5 @@
-# This program calculate tip and total amount
+# This program calculates the tip and total bill amount
+# based on user input
 def tip_your_waiter():
     bill_amount = float(input("Enter the bill amount: "))
     tip_percentage = int(input("Enter the tip percentage (e.g., positive integer only): "))
