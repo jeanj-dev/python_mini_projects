@@ -15,14 +15,20 @@ A collection of small Python programs built to solve practical, real-world probl
 - Rectangle room calculator
 - Minutes to hours converter
 - Grocery total with tax
+- Number guessing game
 
 ## Skills Demonstrated
 - User input and output
 - Numeric calculations and financials formulas
 - Program structure
-- real-world problem-solving
+- Real-world problem-solving
 - Modeling investment growth over time
-- iterative problem-solving using loops
+- Iterative problem-solving using loops
+- Random module
+- Boolean flag to control the game
+- Use try/except to handle invalid input
+- Keep trap of User input
+- Use f-string to format output
   
 
 ## How to Run
