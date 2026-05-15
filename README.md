@@ -1,10 +1,8 @@
-# python\_mini\_projects
-
-A collection of small python projects I built that showcased practical, real-world problems while learning computer science fundamentals.
-
 # Python Mini Projects
 
 A collection of small Python programs built to solve practical, real-world problems while learning computer science fundamentals.
+
+
 
 ## Projects Included
 
@@ -20,6 +18,21 @@ A collection of small Python programs built to solve practical, real-world probl
 * Grocery total with tax
 * Number guessing game
 * Age to hundred poll
+* Command-line banking simulator
+* User input
+
+  * Deposit money
+  * Withdraw money
+  * Check balance
+  * View transaction
+  * Exit program
+* User input validation for
+
+  * Empty name
+  * Menu choice
+  * Money amount
+
+
 
 ## Skills Demonstrated
 
@@ -38,7 +51,7 @@ A collection of small Python programs built to solve practical, real-world probl
 * Nested loops
 * Constants
 * Dictionaries
-* Git and Github
+* Git and GitHub
 
 
 
