@@ -20,9 +20,12 @@ A collection of small Python programs built to solve practical, real-world probl
 * Age to hundred poll
 * Command-line banking simulator
 * User input
-
+  * Ask for user name
+  * Ask for 4-digit PIN
+  * Lock account after 3 attempts
   * Deposit money
   * Withdraw money
+  * Prevent overdrafts
   * Check balance
   * View transaction
   * Exit program
@@ -31,7 +34,6 @@ A collection of small Python programs built to solve practical, real-world probl
   * Empty name
   * Menu choice
   * Money amount
-
 
 
 ## Skills Demonstrated
@@ -52,7 +54,6 @@ A collection of small Python programs built to solve practical, real-world probl
 * Constants
 * Dictionaries
 * Git and GitHub
-
 
 
 ## How to Run
