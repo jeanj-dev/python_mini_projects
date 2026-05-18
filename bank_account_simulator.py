@@ -5,12 +5,11 @@ user_logging = False
 correct_pin = 1234
 tries = 3
 
-# Create initial values menu
+# Create initial value menu
 # create an empty list to store transaction history
 current_balance = 0
 transaction_history = []
 
-# Greet the customers and inform them of their account balance
 print("Welcome to Village Bank!")
 
 # Ensure user doesn't enter empty strings
@@ -21,6 +20,7 @@ while True:
 
     print("Name cannot be empty.")
    
+# Greet user
 print(f"Hello {account_holder.title()}!")
 
 # Ensure user enter correct pin
@@ -45,9 +45,7 @@ while tries > 0:
             user_logging = False
         else:
             print(f"Incorrect! {tries} attempt{'s' if tries != 1 else ''} remaining")
-
-    
-               
+                  
 account_menu = {1:"Deposit", 2:"Withdraw", 3:"Check balance", 4:"View transaction history", 5:"Exit"}
 
 while user_logging:
