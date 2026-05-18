@@ -1,5 +1,10 @@
 # Create a bank account holder simulator
 
+# Set flag variable to control the user logging activity
+user_logging = False
+correct_pin = 1234
+tries = 3
+
 # Create initial values menu
 # create an empty list to store transaction history
 current_balance = 0
@@ -11,24 +16,44 @@ print("Welcome to Village Bank!")
 # Ensure user doesn't enter empty strings
 while True:
     account_holder = input("Please, enter your name: ").strip()
-
     if account_holder != "":
         break
 
     print("Name cannot be empty.")
    
-print(f"Hello {account_holder.title()}, your current balance is ${current_balance:.2f}\n")
-    
+print(f"Hello {account_holder.title()}!")
 
+# Ensure user enter correct pin
+# Ensure account is locked after three tries
+while tries > 0:
+    try:
+        pin_number = int(input("Enter your pin number: "))
+    except ValueError:
+        print("Invalid input! Numbers only.\n")
+        continue  
+
+    # only display menu when user enters correct pin
+    if pin_number == correct_pin:
+        print(f"Access Granted! {account_holder.title()}")
+        print("\nHere are your account menu options:")
+        user_logging = True
+        break
+    else: 
+        tries -= 1
+        if tries == 0:
+            print("Too many incorrect attempts. Account Locked.\n")
+            user_logging = False
+        else:
+            print(f"Incorrect! {tries} attempt{'s' if tries != 1 else ''} remaining")
+
+    
+               
 account_menu = {1:"Deposit", 2:"Withdraw", 3:"Check balance", 4:"View transaction history", 5:"Exit"}
 
-# Set flag variable to control the user logging activity
-user_logging = True
-
 while user_logging:
-
+    # Only display menu when user enters the correct pin
     # Prompt user to choose their account menu options
-    print("Here are your account menu options:")
+    
     for key, value in account_menu.items():
         print(f"{key} = {value}")
     print()
@@ -46,7 +71,7 @@ while user_logging:
     else:
         
         # Ensure users enter only numbers
-        if account_menu[choice] == "Deposit":
+        if choice == 1:
             try:
                 deposit = float(input("Please enter your deposit amount: "))
             except ValueError:
@@ -57,10 +82,10 @@ while user_logging:
                 print("Deposit amount must be greater than $0.\n")
             else:
                 current_balance += deposit
-                transaction_history.append(f"Deposit: ${deposit:.2f}")
-                print(f"{account_holder.title()}, your current balance is ${current_balance:.2f}\n")              
+                transaction_history.append(f"Deposit: ${deposit:.2f} | Balance: ${current_balance:.2f}")
+                print(f"Deposit: ${deposit:.2f} | Balance: ${current_balance:.2f}\n")              
                                 
-        elif account_menu[choice] == "Withdraw":
+        elif choice == 2:
             try:
                 withdrawal = float(input("Please enter your withdrawal amount: "))
             except ValueError:
@@ -70,38 +95,37 @@ while user_logging:
             if withdrawal <= 0:
                 print("Withdrawal amount must be greater than $0.\n")
             elif withdrawal > current_balance:
-                print("Insufficient funds!\n")
+                print(f"Insufficient funds! -- Balance: ${current_balance:.2f}\n")
             else:
                 current_balance -= withdrawal
-                print(f"{account_holder.title()}, your current balance is ${current_balance:.2f}\n")
-                transaction_history.append(f"Withdraw: ${withdrawal:.2f}")
-                                                   
-        elif account_menu[choice] == "Check balance":
+                transaction_history.append(f"Withdraw: ${withdrawal:.2f} | Balance: ${current_balance:.2f}")
+                print(f"Withdraw: ${withdrawal:.2f} | Balance: ${current_balance:.2f}\n")
+                                  
+        elif choice == 3:
             print(f"Your current balance is ${current_balance:.2f}\n")
 
-        elif account_menu[choice] == "View transaction history":
+        elif choice == 4:
             if len(transaction_history) == 0:
-                print("No transactions history.\n")
+                print("No transaction history.\n")
             else:
                 print("\nTransaction history:")
                 for transaction in transaction_history:
                     print(transaction)
                 print()
             
-        elif account_menu[choice] == "Exit":
+        elif choice == 5:
             print("Goodbye!\n")
-
+            print(f"Your final balance is ${current_balance:.2f}")
+            print(f"You have made {len(transaction_history)} transactions.\n")
             user_logging = False
 
 # Show the amount and type of transactions made
-print(f"Your final balance is ${current_balance:.2f}")
-print(f"You have made {len(transaction_history)} transactions.\n")
-
 # Show final transactions history
 if transaction_history:
     print("Final transaction history: ")
     for transaction in transaction_history:
         print(transaction)
+        
 
 
 
