@@ -17,6 +17,12 @@ A collection of small Python programs built to solve practical, real-world probl
 * Minutes to hours converter
 * Grocery total with tax
 * Number guessing game
+  * Random number generation
+  * Input validation
+  * Maximum guess limit
+  * Tracks number of guesses
+  * Display how many guesses are left
+  * Reveals the correct number when guesses run out
 * Age to hundred poll
 * Command-line banking simulator
 * User input
@@ -30,7 +36,6 @@ A collection of small Python programs built to solve practical, real-world probl
   * View transaction
   * Exit program
 * User input validation for
-
   * Empty name
   * Menu choice
   * Money amount
