@@ -16,7 +16,20 @@ A collection of small Python programs built to solve practical, real-world probl
 * Rectangle room calculator
 * Minutes to hours converter
 * Grocery total with tax
+* Rock Paper Scissors
+
+&#x20;  \* Human vs Computer 
+
+&#x20;  \* 10- round game format
+
+&#x20;  \* Random computer choice using Python's 'random' module
+
+&#x20;  \* Input validation for rock, paper, and scissor
+
+&#x20;  \* Track scores for both human and machine	
+
 * Number guessing game
+
   * Random number generation
   * Input validation
   * Maximum guess limit
@@ -26,6 +39,7 @@ A collection of small Python programs built to solve practical, real-world probl
 * Age to hundred poll
 * Command-line banking simulator
 * User input
+
   * Ask for user name
   * Ask for 4-digit PIN
   * Lock account after 3 attempts
@@ -36,9 +50,11 @@ A collection of small Python programs built to solve practical, real-world probl
   * View transaction
   * Exit program
 * User input validation for
+
   * Empty name
   * Menu choice
   * Money amount
+
 
 
 ## Skills Demonstrated
@@ -59,6 +75,7 @@ A collection of small Python programs built to solve practical, real-world probl
 * Constants
 * Dictionaries
 * Git and GitHub
+
 
 
 ## How to Run
