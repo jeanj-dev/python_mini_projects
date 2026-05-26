@@ -18,7 +18,7 @@ A collection of small Python programs built to solve practical, real-world probl
 * Grocery total with tax
 * Rock Paper Scissors
 
-&#x20;  \* Human vs Computer 
+&#x20;  \* Human vs Computer
 
 &#x20;  \* 10- round game format
 
@@ -26,7 +26,7 @@ A collection of small Python programs built to solve practical, real-world probl
 
 &#x20;  \* Input validation for rock, paper, and scissor
 
-&#x20;  \* Track scores for both human and machine	
+&#x20;  \* Track scores for both human and machine
 
 * Number guessing game
 
@@ -54,6 +54,18 @@ A collection of small Python programs built to solve practical, real-world probl
   * Empty name
   * Menu choice
   * Money amount
+
+
+
+* To-Do list App
+
+  * Add tasks
+  * view task
+  * complete task
+  * delete task
+  * exit program
+
+
 
 
 
