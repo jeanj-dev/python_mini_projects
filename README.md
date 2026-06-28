@@ -17,38 +17,30 @@ A collection of small Python programs built to solve practical, real-world probl
 * Minutes to hours converter
 * Grocery total with tax
 * Rock Paper Scissors
-
-&#x20;  \* Human vs Computer
-
-&#x20;  \* 10- round game format
-
-&#x20;  \* Random computer choice using Python's 'random' module
-
-&#x20;  \* Input validation for rock, paper, and scissor
-
-&#x20;  \* Track scores for both human and machine
-
+ * Human vs Computer
+ * 10- round game format
+ * Random computer choice using Python's 'random' module
+ * Input validation for rock, paper, and scissor
+ * Track scores for both human and machine
 * Number guessing game
-
-  * Random number generation
-  * Input validation
-  * Maximum guess limit
-  * Tracks number of guesses
-  * Display how many guesses are left
-  * Reveals the correct number when guesses run out
+ * Random number generation
+ * Input validation
+ * Maximum guess limit
+ * Tracks number of guesses
+ * Display how many guesses are left
+ * Reveals the correct number when guesses run out
 * Age to hundred poll
-* Command-line banking simulator
-* User input
-
-  * Ask for user name
-  * Ask for 4-digit PIN
-  * Lock account after 3 attempts
-  * Deposit money
-  * Withdraw money
-  * Prevent overdrafts
-  * Check balance
-  * View transaction
-  * Exit program
+ * Command-line banking simulator
+ * User input
+ * Ask for user name
+ * Ask for 4-digit PIN
+ * Lock account after 3 attempts
+ * Deposit money
+ * Withdraw money
+ * Prevent overdrafts
+ * Check balance
+ * View transaction
+ * Exit program
 * User input validation for
 
   * Empty name
