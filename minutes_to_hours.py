@@ -10,6 +10,7 @@ def get_minute_inputs():
     while True:
         try:
             minutes = int(input("Enter the number of minutes: "))
+            
             if minutes < 0:
                 print("Positive integer only!")
                 continue
