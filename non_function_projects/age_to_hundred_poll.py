@@ -5,8 +5,8 @@
 from datetime import datetime
 current_year = datetime.now().year
 
-# Create an empty dictionary
-poll_results = {}
+# Create an empty list to store poll responses
+poll_results = []
 
 TARGET_AGE = 100
 
@@ -17,6 +17,9 @@ while poll_active:
     name = input("Enter your name: ").strip()
     if not name:
         print("Invalid input! Please enter a name.")
+        continue
+    if not name.replace(" ", "").isalpha():
+        print("Invalid input! Names should contain letters and spaces only.")
         continue
     
     # Ensure user enters correct input
@@ -29,38 +32,55 @@ while poll_active:
             print("Invalid input! Please enter a number.")
             continue
 
-        # Inform user if they are already 100 years old
+        # Reject negative ages
         if age < 0:
             print("Invalid input! Please enter a valid age.")
-        elif age >= TARGET_AGE:
-            print(f"Congratulations, {name.title()}! You've already reached the target age.") 
-            valid_age = True     
         else:
             valid_age = True 
 
     # Find out the year user was born 
-    year_born = current_year - age
 
+    while True:
+        birthday_passed = input(
+            "Has your birthday already occurred this year? (yes/no) "
+        ).strip().lower()
+
+        if birthday_passed in ["yes", "y"]:
+            year_born = current_year - age
+            break
+        elif birthday_passed in ["no", "n"]:
+            year_born = current_year - age - 1
+            break
+        else:
+            print("Please enter yes or no.")
+            
     # Find what year the user reaches 100
-    years_to_reach_hundred = TARGET_AGE - age
-    year_turning_hundred = current_year + years_to_reach_hundred
+    year_turning_hundred = year_born + TARGET_AGE
     
     # Store age, birth year, and the year they turn 100 
-    poll_results[name] ={
+    poll_results.append({
+        'name': name,
         'year_born': year_born,
         'your_current_age': age,
         'milestone_year': year_turning_hundred
-    } 
+    })
+    
 
     # Find out if more people want to take the poll
-    repeat = input("\nDoes anyone else want to try our poll? (yes/no) ")
-    if repeat.strip().lower() != 'yes':
-        poll_active = False
+    while True:
+        repeat = input("\nDoes anyone else want to try our poll? (yes/no) ").strip().lower()
+        if repeat in ['yes', 'y']:
+            break
+        elif repeat in ['no', 'n']:
+            poll_active = False
+            break
+        else:
+            print("Please enter yes or no.")
 
 # Display the polls
-for name, info in poll_results.items():
-    print(f"\nHi {name.title()}, you are {info['your_current_age']} years old.")
-    print(f"You were born around {info['year_born']}.")
+for info in poll_results:
+    print(f"\nHi {info['name'].title()}, you are {info['your_current_age']} years old.")
+    print(f"You were born in {info['year_born']}.")
 
     if info['your_current_age'] >= TARGET_AGE:
         print(f"You've already reached {TARGET_AGE} years old.\n")

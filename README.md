@@ -2,7 +2,10 @@
 
 A collection of small Python programs built to solve practical, real-world problems while learning computer science fundamentals.
 
+## Project Organization
 
+- `non_function_projects/` contains programs written before refactoring with functions.
+- `function_projects/` contains programs organized into reusable functions.
 
 ## Projects Included
 
@@ -84,6 +87,11 @@ A collection of small Python programs built to solve practical, real-world probl
 
 ## How to Run
 
-Run any file using:
-python filename.py
+Run a non-function project:
+
+`python non_function_projects/filename.py`
+
+Run a function-based project:
+
+`python function_projects/filename.py`
 
