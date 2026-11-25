@@ -19,7 +19,7 @@ while not valid_yearly_rate:
     try:
         yearly_rate = float(input("Enter the yearly_rate (5 for 5%): " ))
         if yearly_rate < 0:
-            print("Positive numbers only!")
+            print("Non-negative numbers only!")
         else:
             valid_yearly_rate = True
 
